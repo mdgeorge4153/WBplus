@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">WB+</string>
+    <string name="title_activity_draw">Record Mode</string>
+    <string name="title_activity_playback">Playback Mode</string>
+    <string name="title_activity_main">WB+</string>
+    <string name="record">Record</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+
+</resources>
