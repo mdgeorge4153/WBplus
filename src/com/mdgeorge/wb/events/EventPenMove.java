@@ -1,14 +1,13 @@
 package com.mdgeorge.wb.events;
 
-public class EventPenMove implements AnimationEvent {
+public final class EventPenMove extends AnimationEvent {
 
-	private final long  time;
 	private final float x, y;
 	private final float width;
 	
 	public EventPenMove(long time, float x, float y, float width)
 	{
-		this.time  = time;
+		super(time);
 		this.x     = x;
 		this.y     = y;
 		this.width = width;
@@ -20,11 +19,6 @@ public class EventPenMove implements AnimationEvent {
 	throws E
 	{
 		return visitor.visitPenMove(this);
-	}
-
-	@Override
-	public long getTime() {
-		return this.time;
 	}
 
 	public float getX() {

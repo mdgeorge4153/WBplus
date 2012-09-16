@@ -98,9 +98,15 @@ public class EventDrawer implements AnimationEventVisitor<Void, RuntimeException
 
 	
 	@Override
-	public Void visitColor(EventColor event) throws RuntimeException {
+	public Void visitColor(EventColor event) {
 		checkTime(event);
 		brush.setColor(event.getColor());
+		return null;
+	}
+	
+	@Override
+	public Void visitPage(EventPage event) {
+		checkTime(event);
 		return null;
 	}
 

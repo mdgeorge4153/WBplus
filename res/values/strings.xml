@@ -5,6 +5,7 @@
     <string name="title_activity_playback">Playback Mode</string>
     <string name="title_activity_main">WB+</string>
     <string name="recording">RECORDING</string>
-    <string name="paused">PAUSED</string>
+    <string name="paused">PAUSED</string><string name="title_activity_animation_test">AnimationTest</string>
+    
 
 </resources>

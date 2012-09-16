@@ -8,7 +8,7 @@
  * <uses-permission android:name="android.permission.RECORD_AUDIO" />
  *
  */
-package com.android.audiorecordtest;
+package com.mdgeorge.tests;
 
 import android.app.Activity;
 import android.widget.LinearLayout;

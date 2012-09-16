@@ -1,15 +1,14 @@
 package com.mdgeorge.wb.events;
 
 
-public class EventEraserMove implements AnimationEvent
+public final class EventEraserMove extends AnimationEvent
 {
-	private final long	time;
 	private final float	width;
 	private final float	x, y;
 
 	public EventEraserMove(long time, float x, float y, float width)
 	{
-		this.time  = time;
+		super(time);
 		this.x     = x;
 		this.y     = y;
 		this.width = width;
@@ -20,12 +19,6 @@ public class EventEraserMove implements AnimationEvent
 	        throws E
 	{
 		return visitor.visitEraserMove(this);
-	}
-
-	@Override
-	public long getTime()
-	{
-		return this.time;
 	}
 
 	public float getWidth()

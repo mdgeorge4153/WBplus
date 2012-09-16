@@ -6,4 +6,5 @@ public interface AnimationEventVisitor <R,E extends Exception> {
 	public R visitEraserStart (EventEraserStart event) throws E;
 	public R visitEraserMove  (EventEraserMove  event) throws E;
 	public R visitColor       (EventColor       event) throws E;
+	public R visitPage        (EventPage        event) throws E;
 }

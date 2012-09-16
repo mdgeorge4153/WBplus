@@ -1,20 +1,13 @@
 package com.mdgeorge.wb.events;
 
-public class EventColor implements AnimationEvent {
+public final class EventColor extends AnimationEvent {
 	
 	private final int  color;
-	private final long time;
 	
 	public EventColor(long time, int color)
 	{
+		super(time);
 		this.color = color;
-		this.time  = time;
-	}
-
-	@Override
-	public long getTime()
-	{
-		return this.time;
 	}
 
 	public int getColor()
