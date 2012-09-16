@@ -4,8 +4,7 @@
     <string name="title_activity_draw">Record Mode</string>
     <string name="title_activity_playback">Playback Mode</string>
     <string name="title_activity_main">WB+</string>
-    <string name="record">Record</string>
-    <string name="play">Play</string>
-    <string name="pause">Pause</string>
+    <string name="recording">RECORDING</string>
+    <string name="paused">PAUSED</string>
 
 </resources>

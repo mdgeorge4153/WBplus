@@ -3,6 +3,6 @@
         <item android:id="@+id/button_black" android:showAsAction="ifRoom" android:icon="@drawable/ic_black"></item>
         <item android:id="@+id/button_blue" android:showAsAction="ifRoom" android:icon="@drawable/ic_blue"></item>
         <item android:id="@+id/button_green" android:showAsAction="ifRoom" android:icon="@drawable/ic_green"></item>
-        <item android:id="@+id/button_record_pause" android:showAsAction="ifRoom" android:title="@string/record" android:actionViewClass="android.widget.ToggleButton"></item>
+        <item android:id="@+id/button_record_pause" android:showAsAction="ifRoom" android:actionLayout="@layout/play_pause"></item>
     </group>
 </menu>

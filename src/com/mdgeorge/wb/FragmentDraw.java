@@ -19,7 +19,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mdgeorge.wb.events.*;
-import android.graphics.*;
 
 public class FragmentDraw extends Fragment
 {
@@ -49,8 +48,7 @@ public class FragmentDraw extends Fragment
 	             , Bundle savedInstanceState
 	             )
 	{
-		this.view = new DrawingArea();
-		return this.view;
+		return inflater.inflate(R.layout.fragment_record, group, false);
 	}
 	
 	@Override
@@ -62,6 +60,7 @@ public class FragmentDraw extends Fragment
 	public boolean onOptionsItemSelected(MenuItem item) {
 		long time = SystemClock.uptimeMillis();
 		
+		/*
 		switch(item.getItemId())
 		{
 			case R.id.button_black:
@@ -76,14 +75,13 @@ public class FragmentDraw extends Fragment
 			case R.id.button_record_pause:
 				if (this.clock.isPaused()) {
 					this.clock.startClock(time);
-					item.setTitle(R.string.pause);
 				}
 				else {
 					this.clock.pauseClock(time);
-					item.setTitle(R.string.record);
 				}
 				return true;
 		}
+		*/
 		
 		return false;
 	}

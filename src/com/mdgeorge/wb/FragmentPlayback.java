@@ -17,7 +17,6 @@ public class FragmentPlayback extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setHasOptionsMenu(true);
     }
 
 	@Override
@@ -27,37 +26,6 @@ public class FragmentPlayback extends Fragment {
 	             , Bundle savedInstanceState
 	             )
 	{
-		return new ReplayView();
+		return inflater.inflate(R.layout.fragment_playback, group, false);
 	}
-    
-	@Override
-	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-		inflater.inflate(R.menu.fragment_playback, menu);
-	}
-	
-	@Override
-	public boolean 	onOptionsItemSelected(MenuItem item) {
-		final long time = clock.getRelativeTime(SystemClock.uptimeMillis());
-		switch(item.getItemId()) {
-			case R.id.button_play_pause:
-				if (clock.isPaused()) {
-					item.setTitle(R.string.pause);
-					clock.startClock(time);
-				}
-				else {
-					item.setTitle(R.string.play);
-					clock.pauseClock(time);
-				}
-				return true;
-		}
-		
-		return false;
-	}
-	
-    public class ReplayView extends View
-    {
-    	public ReplayView() {
-    		super(FragmentPlayback.this.getActivity());
-        }
-    }
 }
