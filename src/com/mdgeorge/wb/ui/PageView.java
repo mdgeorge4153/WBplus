@@ -1,7 +1,8 @@
-package com.mdgeorge.wb;
+package com.mdgeorge.wb.ui;
+
+import com.mdgeorge.wb.R;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
@@ -29,13 +30,13 @@ public class PageView extends View
 		
 		TypedArray array = context.obtainStyledAttributes(
 				attrs,
-		        R.styleable.com_mdgeorge_wb_PageView,
+		        R.styleable.com_mdgeorge_wb_ui_PageView,
 		        defStyle,
 		        0
 		        );
 
 		this.drawable = array.getDrawable(
-				R.styleable.com_mdgeorge_wb_PageView_android_src
+				R.styleable.com_mdgeorge_wb_ui_PageView_android_src
 				);
 		
 		array.recycle();

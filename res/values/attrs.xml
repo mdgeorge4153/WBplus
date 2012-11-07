@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="com.mdgeorge.wb.PageView">
+    <declare-styleable name="com.mdgeorge.wb.ui.PageView">
         <attr name="android:src" />
+    </declare-styleable>
+    
+    <declare-styleable name="com.mdgeorge.wb.ui.ShiftingGroup">
+    </declare-styleable>
+    
+    <declare-styleable name="com.mdgeorge.wb.ui.FixedAspectFrame">
+        <attr name="aspectW" format="integer" />
+        <attr name="aspectH" format="integer" />
     </declare-styleable>
 </resources>

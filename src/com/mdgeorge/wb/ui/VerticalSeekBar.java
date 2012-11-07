@@ -1,4 +1,4 @@
-package com.mdgeorge.wb;
+package com.mdgeorge.wb.ui;
 
 import android.content.Context;
 import android.graphics.Canvas;
