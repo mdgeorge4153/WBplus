@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:divider="@android:drawable/divider_horizontal_dark"
+    android:divider="@android:drawable/divider_horizontal_bright"
     android:dividerPadding="10dp"
-    android:gravity="bottom"
+    android:gravity="fill_horizontal"
     android:orientation="horizontal"
     android:showDividers="middle" >
 
-    <ImageView
-        android:id="@+id/ImageView01"
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        layout="@layout/dummy_pages" />
+
+    <com.mdgeorge.wb.ui.FixedAspectFrame
+        android:id="@+id/secondDrawing"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        android:src="@drawable/dummy_page" />
+        android:layout_weight="0"
+        app:aspectH="4"
+        app:aspectW="3" >
 
-    <ImageView
-        android:id="@+id/imageView1"
+    </com.mdgeorge.wb.ui.FixedAspectFrame>
+
+    <com.mdgeorge.wb.ui.FixedAspectFrame
+        android:id="@+id/mainDrawing"
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        android:src="@drawable/dummy_page" />
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        app:aspectH="4"
+        app:aspectW="3" >
 
-    <include
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        layout="@layout/dummy_pages" />
+    </com.mdgeorge.wb.ui.FixedAspectFrame>
     
 </LinearLayout>

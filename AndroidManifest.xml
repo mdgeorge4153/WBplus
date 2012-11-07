@@ -14,20 +14,26 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_main" >
+        <activity android:name=".MainActivity" android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity><activity android:name="com.mdgeorge.tests.ScrubTest" android:label="@string/title_activity_scrub_test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.mdgeorge.tests.AudioRecordTest"
-            android:label="Recording Test"
-            Recorder="" >
+            Recorder=""
+            android:label="Recording Test" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -36,9 +42,11 @@
             android:label="@string/title_activity_animation_test" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
     </application>
 
 </manifest>

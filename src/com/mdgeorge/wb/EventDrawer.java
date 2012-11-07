@@ -110,10 +110,15 @@ public class EventDrawer implements AnimationEventVisitor<Void, RuntimeException
 		return null;
 	}
 
+	public Void visitAudio(EventAudio event) {
+		checkTime(event);
+		return null;
+	}
 	
 	private long time;
 	private void checkTime(AnimationEvent event) {
 		assert(event.getTime() >= this.time);
 		this.time = event.getTime();
 	}
+	
 }

@@ -17,8 +17,10 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import com.mdgeorge.wb.events.*;
+import com.mdgeorge.wb.ui.FixedAspectFrame;
 
 public class FragmentDraw extends Fragment
 {
@@ -48,7 +50,22 @@ public class FragmentDraw extends Fragment
 	             , Bundle savedInstanceState
 	             )
 	{
-		return inflater.inflate(R.layout.fragment_record, group, false);
+		Log.i("moo", "moo");
+		this.view             = new DrawingArea();
+		View      result      = inflater.inflate(R.layout.fragment_record, group, false);
+		ViewGroup mainFrame   = (ViewGroup) result.findViewById(R.id.mainDrawing);
+		ViewGroup secondFrame = (ViewGroup) result.findViewById(R.id.secondDrawing);
+		
+		mainFrame.addView(this.view);
+		if (secondFrame != null)
+			secondFrame.addView(new DrawingArea());
+		
+		return result;
+		/*
+		FrameLayout layout = new FixedAspectFrame(this.getActivity(), 3, 4);
+		layout.addView(new DrawingArea());
+		return layout;
+		*/
 	}
 	
 	@Override
@@ -60,7 +77,6 @@ public class FragmentDraw extends Fragment
 	public boolean onOptionsItemSelected(MenuItem item) {
 		long time = SystemClock.uptimeMillis();
 		
-		/*
 		switch(item.getItemId())
 		{
 			case R.id.button_black:
@@ -81,7 +97,6 @@ public class FragmentDraw extends Fragment
 				}
 				return true;
 		}
-		*/
 		
 		return false;
 	}
